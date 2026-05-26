@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
+import Link from 'next/link';
 
-import { Globe, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowRight, Heart } from 'lucide-react';
 import { FaInstagram, FaFacebookF, FaDiscord } from 'react-icons/fa';
 
 const footerLinks = {
@@ -63,50 +63,51 @@ const footerLinks = {
     },
   ],
 };
+
 export default function Footer() {
-	return (
+  return (
     <footer
       className="
-				relative
-				overflow-hidden
-				border-t border-white/10
-				bg-[#081120]
-			"
+        relative
+        overflow-hidden
+        border-t border-white/10
+        bg-[#081120]
+      "
     >
       {/* BACKGROUND */}
 
       <div
         className="
-					absolute
-					inset-0
-					bg-[radial-gradient(circle_at_bottom,rgba(249,115,22,0.08),transparent_35%)]
-					pointer-events-none
-				"
+          absolute
+          inset-0
+          bg-[radial-gradient(circle_at_bottom,rgba(249,115,22,0.08),transparent_35%)]
+          pointer-events-none
+        "
       />
 
       <div
         className="
-					relative z-10
-					px-4
-					md:px-8
-					xl:px-12
-					pt-24
-					pb-10
-				"
+          relative z-10
+          px-4
+          md:px-8
+          xl:px-12
+          pt-24
+          pb-10
+        "
       >
         {/* TOP GRID */}
 
         <div
           className="
-						grid
-						grid-cols-1
-						sm:grid-cols-2
-						xl:grid-cols-5
-						gap-10
-						xl:gap-12
-						pb-16
-						border-b border-white/10
-					"
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            xl:grid-cols-5
+            gap-10
+            xl:gap-12
+            pb-16
+            border-b border-white/10
+          "
         >
           {/* BRAND */}
 
@@ -117,11 +118,11 @@ export default function Footer() {
               <div>
                 <h2
                   className="
-										text-4xl
-										font-black
-										tracking-tight
-										text-white
-									"
+                    text-4xl
+                    font-black
+                    tracking-tight
+                    text-white
+                  "
                 >
                   Bite
                   <span className="text-orange-500">Rush</span>
@@ -129,12 +130,12 @@ export default function Footer() {
 
                 <p
                   className="
-										mt-2
-										text-sm
-										text-gray-500
-										uppercase
-										tracking-[0.3em]
-									"
+                    mt-2
+                    text-sm
+                    text-gray-500
+                    uppercase
+                    tracking-[0.3em]
+                  "
                 >
                   Fresh • Fast • Delivered
                 </p>
@@ -144,10 +145,10 @@ export default function Footer() {
 
               <p
                 className="
-									text-gray-400
-									leading-relaxed
-									max-w-md
-								"
+                  text-gray-400
+                  leading-relaxed
+                  max-w-md
+                "
               >
                 Experience premium handcrafted meals prepared with fresh
                 ingredients and delivered with lightning-fast service directly
@@ -162,58 +163,60 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-    w-12 h-12
-    rounded-2xl
-    bg-white/[0.03]
-    border border-white/10
-    backdrop-blur-xl
-    flex items-center justify-center
-    text-gray-400
-    hover:bg-orange-500
-    hover:border-orange-500
-    hover:text-white
-    transition-all duration-300
-  "
+                    w-12 h-12
+                    rounded-2xl
+                    bg-white/[0.03]
+                    border border-white/10
+                    backdrop-blur-xl
+                    flex items-center justify-center
+                    text-gray-400
+                    hover:bg-orange-500
+                    hover:border-orange-500
+                    hover:text-white
+                    transition-all duration-300
+                  "
                 >
                   <FaInstagram />
                 </a>
+
                 <a
                   href="https://discord.com/invite/biterush"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-    w-12 h-12
-    rounded-2xl
-    bg-white/[0.03]
-    border border-white/10
-    backdrop-blur-xl
-    flex items-center justify-center
-    text-gray-400
-    hover:bg-orange-500
-    hover:border-orange-500
-    hover:text-white
-    transition-all duration-300
-  "
+                    w-12 h-12
+                    rounded-2xl
+                    bg-white/[0.03]
+                    border border-white/10
+                    backdrop-blur-xl
+                    flex items-center justify-center
+                    text-gray-400
+                    hover:bg-orange-500
+                    hover:border-orange-500
+                    hover:text-white
+                    transition-all duration-300
+                  "
                 >
                   <FaDiscord />
                 </a>
+
                 <a
                   href="https://www.facebook.com/biterush/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-    w-12 h-12
-    rounded-2xl
-    bg-white/[0.03]
-    border border-white/10
-    backdrop-blur-xl
-    flex items-center justify-center
-    text-gray-400
-    hover:bg-orange-500
-    hover:border-orange-500
-    hover:text-white
-    transition-all duration-300
-  "
+                    w-12 h-12
+                    rounded-2xl
+                    bg-white/[0.03]
+                    border border-white/10
+                    backdrop-blur-xl
+                    flex items-center justify-center
+                    text-gray-400
+                    hover:bg-orange-500
+                    hover:border-orange-500
+                    hover:text-white
+                    transition-all duration-300
+                  "
                 >
                   <FaFacebookF />
                 </a>
@@ -226,44 +229,44 @@ export default function Footer() {
           <div>
             <h3
               className="
-								text-white
-								font-bold
-								text-lg
-								mb-6
-							"
+                text-white
+                font-bold
+                text-lg
+                mb-6
+              "
             >
               Company
             </h3>
 
             <div
               className="
-								grid
-								grid-cols-2
-								sm:grid-cols-1
-								gap-x-6
-								gap-y-4
-							"
+                grid
+                grid-cols-2
+                sm:grid-cols-1
+                gap-x-6
+                gap-y-4
+              "
             >
               {footerLinks.company.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className="
-										group
-										flex items-center gap-2
-										text-gray-400
-										hover:text-orange-500
-										transition-colors duration-300
-									"
+                    group
+                    flex items-center gap-2
+                    text-gray-400
+                    hover:text-orange-500
+                    transition-colors duration-300
+                  "
                 >
                   <ArrowRight
                     className="
-											w-4 h-4
-											opacity-0
-											-group-hover:translate-x-1
-											group-hover:opacity-100
-											transition-all duration-300
-										"
+                      w-4 h-4
+                      opacity-0
+                      group-hover:translate-x-1
+                      group-hover:opacity-100
+                      transition-all duration-300
+                    "
                   />
 
                   {link.name}
@@ -277,44 +280,44 @@ export default function Footer() {
           <div>
             <h3
               className="
-								text-white
-								font-bold
-								text-lg
-								mb-6
-							"
+                text-white
+                font-bold
+                text-lg
+                mb-6
+              "
             >
               Support
             </h3>
 
             <div
               className="
-								grid
-								grid-cols-2
-								sm:grid-cols-1
-								gap-x-6
-								gap-y-4
-							"
+                grid
+                grid-cols-2
+                sm:grid-cols-1
+                gap-x-6
+                gap-y-4
+              "
             >
               {footerLinks.support.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className="
-										group
-										flex items-center gap-2
-										text-gray-400
-										hover:text-orange-500
-										transition-colors duration-300
-									"
+                    group
+                    flex items-center gap-2
+                    text-gray-400
+                    hover:text-orange-500
+                    transition-colors duration-300
+                  "
                 >
                   <ArrowRight
                     className="
-											w-4 h-4
-											opacity-0
-											group-hover:translate-x-1
-											group-hover:opacity-100
-											transition-all duration-300
-										"
+                      w-4 h-4
+                      opacity-0
+                      group-hover:translate-x-1
+                      group-hover:opacity-100
+                      transition-all duration-300
+                    "
                   />
 
                   {link.name}
@@ -328,34 +331,34 @@ export default function Footer() {
           <div>
             <h3
               className="
-								text-white
-								font-bold
-								text-lg
-								mb-6
-							"
+                text-white
+                font-bold
+                text-lg
+                mb-6
+              "
             >
               Contact
             </h3>
 
             <div
               className="
-								grid
-								grid-cols-1
-								sm:grid-cols-2
-								xl:grid-cols-1
-								gap-5
-							"
+                grid
+                grid-cols-1
+                sm:grid-cols-2
+                xl:grid-cols-1
+                gap-5
+              "
             >
               <div className="flex items-start gap-3">
                 <div
                   className="
-										w-10 h-10
-										rounded-xl
-										bg-orange-500/10
-										border border-orange-500/20
-										flex items-center justify-center
-										flex-shrink-0
-									"
+                    w-10 h-10
+                    rounded-xl
+                    bg-orange-500/10
+                    border border-orange-500/20
+                    flex items-center justify-center
+                    flex-shrink-0
+                  "
                 >
                   <MapPin className="w-5 h-5 text-orange-500" />
                 </div>
@@ -368,13 +371,13 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div
                   className="
-										w-10 h-10
-										rounded-xl
-										bg-orange-500/10
-										border border-orange-500/20
-										flex items-center justify-center
-										flex-shrink-0
-									"
+                    w-10 h-10
+                    rounded-xl
+                    bg-orange-500/10
+                    border border-orange-500/20
+                    flex items-center justify-center
+                    flex-shrink-0
+                  "
                 >
                   <Phone className="w-5 h-5 text-orange-500" />
                 </div>
@@ -385,13 +388,13 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div
                   className="
-										w-10 h-10
-										rounded-xl
-										bg-orange-500/10
-										border border-orange-500/20
-										flex items-center justify-center
-										flex-shrink-0
-									"
+                    w-10 h-10
+                    rounded-xl
+                    bg-orange-500/10
+                    border border-orange-500/20
+                    flex items-center justify-center
+                    flex-shrink-0
+                  "
                 >
                   <Mail className="w-5 h-5 text-orange-500" />
                 </div>
@@ -406,37 +409,56 @@ export default function Footer() {
 
         <div
           className="
-						pt-8
-						flex
-						flex-col
-						md:flex-row
-						items-center
-						justify-between
-						gap-4
-					"
+            pt-8
+            flex
+            flex-col
+            md:flex-row
+            items-center
+            justify-between
+            gap-4
+          "
         >
           <p className="text-sm text-gray-500 text-center md:text-left">
             © 2026 BiteRush. All rights reserved.
           </p>
 
+          {/* CENTER TEXT */}
+
+          <div className="flex items-center gap-2 text-sm text-gray-500">
+            <span>Made with</span>
+
+            <Heart
+              className="
+                w-4 h-4
+                text-orange-500
+                fill-orange-500
+                animate-pulse
+              "
+            />
+
+            <span>
+              by <span className="text-orange-500 font-medium">Deepak</span>
+            </span>
+          </div>
+
           <div
             className="
-							flex
-							flex-wrap
-							items-center
-							justify-center
-							md:justify-end
-							gap-5
-						"
+              flex
+              flex-wrap
+              items-center
+              justify-center
+              md:justify-end
+              gap-5
+            "
           >
             <Link
               href="/privacy-policy"
               className="
-								text-sm
-								text-gray-500
-								hover:text-orange-500
-								transition-colors duration-300
-							"
+                text-sm
+                text-gray-500
+                hover:text-orange-500
+                transition-colors duration-300
+              "
             >
               Privacy Policy
             </Link>
@@ -444,11 +466,11 @@ export default function Footer() {
             <Link
               href="/terms"
               className="
-								text-sm
-								text-gray-500
-								hover:text-orange-500
-								transition-colors duration-300
-							"
+                text-sm
+                text-gray-500
+                hover:text-orange-500
+                transition-colors duration-300
+              "
             >
               Terms & Conditions
             </Link>
