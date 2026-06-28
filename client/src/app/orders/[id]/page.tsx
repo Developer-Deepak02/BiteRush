@@ -61,13 +61,13 @@ export default function OrderDetailsPage() {
 				const token = localStorage.getItem("token");
 
 				const res = await fetch(
-					`http://localhost:5000/api/orders/${params.id}`,
-					{
-						headers: {
-							Authorization: `Bearer ${token}`,
-						},
-					},
-				);
+          `${process.env.NEXT_PUBLIC_API_URL}/api/orders/${params.id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
 				const data = await res.json();
 

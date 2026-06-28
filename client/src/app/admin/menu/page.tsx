@@ -52,7 +52,7 @@ export default function AdminMenuPage() {
 		try {
 			setLoading(true);
 
-			const res = await fetch("http://localhost:5000/api/menu");
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/menu`);
 
 			const data = await res.json();
 
@@ -89,7 +89,7 @@ export default function AdminMenuPage() {
 			const token = localStorage.getItem("token");
 
 			const res = await fetch(
-				`http://localhost:5000/api/menu/${deleteItemId}`,
+				`${process.env.NEXT_PUBLIC_API_URL}/api/menu/${deleteItemId}`,
 				{
 					method: "DELETE",
 					headers: {

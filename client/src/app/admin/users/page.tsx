@@ -77,13 +77,13 @@ export default function AdminUsersPage() {
 			});
 
 			const res = await fetch(
-				`http://localhost:5000/api/users?${query.toString()}`,
-				{
-					headers: {
-						Authorization: `Bearer ${token}`,
-					},
-				},
-			);
+        `${process.env.NEXT_PUBLIC_API_URL}/api/users?${query.toString()}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
 			const data = await res.json();
 
@@ -109,7 +109,7 @@ export default function AdminUsersPage() {
 		try {
 			const token = localStorage.getItem("token");
 
-			const res = await fetch(`http://localhost:5000/api/users/${id}/block`, {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}/block`, {
 				method: "PUT",
 
 				headers: {
@@ -155,19 +155,22 @@ export default function AdminUsersPage() {
 		try {
 			const token = localStorage.getItem("token");
 
-			const res = await fetch(`http://localhost:5000/api/users/${id}/role`, {
-				method: "PUT",
+			const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}/role`,
+        {
+          method: 'PUT',
 
-				headers: {
-					"Content-Type": "application/json",
+          headers: {
+            'Content-Type': 'application/json',
 
-					Authorization: `Bearer ${token}`,
-				},
+            Authorization: `Bearer ${token}`,
+          },
 
-				body: JSON.stringify({
-					role,
-				}),
-			});
+          body: JSON.stringify({
+            role,
+          }),
+        }
+      );
 
 			const data = await res.json();
 
@@ -207,7 +210,7 @@ export default function AdminUsersPage() {
 		try {
 			const token = localStorage.getItem("token");
 
-			const res = await fetch(`http://localhost:5000/api/users/${id}`, {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}`, {
 				method: "DELETE",
 
 				headers: {

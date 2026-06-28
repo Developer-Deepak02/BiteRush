@@ -49,8 +49,8 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
 				setLoading(true);
 
 				const res = await fetch(
-					`http://localhost:5000/api/menu?search=${query}`,
-				);
+          `${process.env.NEXT_PUBLIC_API_URL}/api/menu?search=${query}`
+        );
 
 				const data = await res.json();
 

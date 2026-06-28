@@ -49,8 +49,8 @@ export default function RelatedProducts({ categoryId, currentItemId }: Props) {
 				if (!categoryId) return;
 
 				const res = await fetch(
-					`http://localhost:5000/api/menu?category=${categoryId}&limit=8`,
-				);
+          `${process.env.NEXT_PUBLIC_API_URL}/api/menu?category=${categoryId}&limit=8`
+        );
 
 				const data = await res.json();
 

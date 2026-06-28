@@ -73,7 +73,7 @@ export default function CartPage() {
 			try {
 				const token = localStorage.getItem("token");
 
-				const res = await fetch("http://localhost:5000/api/addresses", {
+				const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/addresses`, {
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},
@@ -111,7 +111,7 @@ export default function CartPage() {
 
 			const token = localStorage.getItem("token");
 
-			const res = await fetch("http://localhost:5000/api/coupons/apply", {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/coupons/apply`, {
 				method: "POST",
 
 				headers: {
@@ -179,7 +179,7 @@ export default function CartPage() {
 
 			/* CREATE ORDER */
 
-			const orderRes = await fetch("http://localhost:5000/api/orders", {
+			const orderRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`, {
 				method: "POST",
 
 				headers: {
@@ -226,7 +226,7 @@ export default function CartPage() {
 			/* CREATE RAZORPAY ORDER */
 
 			const razorpayRes = await fetch(
-				"http://localhost:5000/api/payments/create-order",
+				`${process.env.NEXT_PUBLIC_API_URL}/api/payments/create-order`,
 				{
 					method: "POST",
 
@@ -268,7 +268,7 @@ export default function CartPage() {
 				handler: async function (response: any) {
 					try {
 						const verifyRes = await fetch(
-							"http://localhost:5000/api/payments/verify",
+							`${process.env.NEXT_PUBLIC_API_URL}/api/payments/verify`,
 							{
 								method: "POST",
 
@@ -318,7 +318,7 @@ export default function CartPage() {
 
 				modal: {
 					ondismiss: async function () {
-						await fetch("http://localhost:5000/api/payments/failure", {
+						await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/payments/failure`, {
 							method: "POST",
 
 							headers: {

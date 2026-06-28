@@ -90,7 +90,7 @@ export default function AdminCouponsPage() {
 
 			const token = localStorage.getItem("token");
 
-			const res = await fetch("http://localhost:5000/api/coupons", {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/coupons`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
@@ -128,7 +128,7 @@ export default function AdminCouponsPage() {
 
 			const token = localStorage.getItem("token");
 
-			const res = await fetch("http://localhost:5000/api/coupons", {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/coupons`, {
 				method: "POST",
 
 				headers: {
@@ -182,7 +182,7 @@ export default function AdminCouponsPage() {
 			const token = localStorage.getItem("token");
 
 			const res = await fetch(
-				`http://localhost:5000/api/coupons/${editingCoupon._id}`,
+				`${process.env.NEXT_PUBLIC_API_URL}/api/coupons/${editingCoupon._id}`,
 				{
 					method: "PUT",
 
@@ -234,7 +234,7 @@ export default function AdminCouponsPage() {
 			const token = localStorage.getItem("token");
 
 			const res = await fetch(
-				`http://localhost:5000/api/coupons/${coupon._id}`,
+				`${process.env.NEXT_PUBLIC_API_URL}/api/coupons/${coupon._id}`,
 				{
 					method: "PUT",
 
@@ -287,7 +287,7 @@ export default function AdminCouponsPage() {
 			const token = localStorage.getItem("token");
 
 			const res = await fetch(
-				`http://localhost:5000/api/coupons/${coupon._id}/permanent`,
+				`${process.env.NEXT_PUBLIC_API_URL}/api/coupons/${coupon._id}/permanent`,
 				{
 					method: "DELETE",
 

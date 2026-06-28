@@ -47,7 +47,7 @@ export default function AddressPage() {
 
 	const fetchAddresses = async () => {
 		try {
-			const res = await fetch("http://localhost:5000/api/addresses", {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/addresses`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
@@ -93,7 +93,7 @@ export default function AddressPage() {
 
 			setAdding(true);
 
-			const res = await fetch("http://localhost:5000/api/addresses", {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/addresses`, {
 				method: "POST",
 
 				headers: {
@@ -138,7 +138,7 @@ export default function AddressPage() {
 
 const handleDelete = async (id: string) => {
 	try {
-		const res = await fetch(`http://localhost:5000/api/addresses/${id}`, {
+		const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/addresses/${id}`, {
 			method: "DELETE",
 
 			headers: {

@@ -59,7 +59,7 @@ export default function AdminReviewsPage() {
 
 			const token = localStorage.getItem("token");
 
-			const res = await fetch("http://localhost:5000/api/admin/reviews", {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/reviews`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
@@ -98,7 +98,7 @@ export default function AdminReviewsPage() {
 			const token = localStorage.getItem("token");
 
 			const res = await fetch(
-				`http://localhost:5000/api/admin/reviews/${deleteReviewId}`,
+				`${process.env.NEXT_PUBLIC_API_URL}/api/admin/reviews/${deleteReviewId}`,
 				{
 					method: "DELETE",
 

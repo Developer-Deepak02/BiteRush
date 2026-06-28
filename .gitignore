@@ -3,7 +3,7 @@ node_modules/
 
 # Env
 .env
-
+test.md
 # Logs
 logs
 *.log

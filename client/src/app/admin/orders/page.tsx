@@ -96,7 +96,7 @@ export default function AdminOrdersPage() {
 				setRefreshing(true);
 			}
 			const token = localStorage.getItem("token");
-			const res = await fetch("http://localhost:5000/api/orders/admin", {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders/admin`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
@@ -134,7 +134,7 @@ export default function AdminOrdersPage() {
 			const token = localStorage.getItem("token");
 
 			const res = await fetch(
-				`http://localhost:5000/api/orders/admin/${orderId}/status`,
+				`${process.env.NEXT_PUBLIC_API_URL}/api/orders/admin/${orderId}/status`,
 				{
 					method: "PUT",
 					headers: {

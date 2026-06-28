@@ -41,7 +41,9 @@ export default function ProductPage() {
 	useEffect(() => {
 		const fetchItem = async () => {
 			try {
-				const res = await fetch(`http://localhost:5000/api/menu/${params.id}`);
+				const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/menu/${params.id}`
+        );
 
 				const data = await res.json();
 

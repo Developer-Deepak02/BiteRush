@@ -97,7 +97,7 @@ export default function AddMenuItemModal({
 	useEffect(() => {
 		const fetchCategories = async () => {
 			try {
-				const res = await fetch("http://localhost:5000/api/categories");
+				const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`);
 
 				const data = await res.json();
 
@@ -194,9 +194,9 @@ export default function AddMenuItemModal({
 			};
 
 			const endpoint =
-				mode === "edit"
-					? `http://localhost:5000/api/menu/${editItem?._id}`
-					: "http://localhost:5000/api/menu";
+        mode === 'edit'
+          ? `${process.env.NEXT_PUBLIC_API_URL}/api/menu/${editItem?._id}`
+          : `${process.env.NEXT_PUBLIC_API_URL}/api/menu`;
 
 			const method = mode === "edit" ? "PUT" : "POST";
 

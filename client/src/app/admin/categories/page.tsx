@@ -50,7 +50,7 @@ export default function AdminCategoriesPage() {
 		try {
 			setLoading(true);
 
-			const res = await fetch("http://localhost:5000/api/categories");
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`);
 
 			const data = await res.json();
 
@@ -107,8 +107,8 @@ export default function AdminCategoriesPage() {
 			const token = localStorage.getItem("token");
 
 			const endpoint = selectedCategory
-				? `http://localhost:5000/api/categories/${selectedCategory._id}`
-				: "http://localhost:5000/api/categories";
+				? `${process.env.NEXT_PUBLIC_API_URL}/api/categories/${selectedCategory._id}`
+				: `${process.env.NEXT_PUBLIC_API_URL}/api/categories`;
 
 			const method = selectedCategory ? "PUT" : "POST";
 
@@ -167,7 +167,7 @@ export default function AdminCategoriesPage() {
 			const token = localStorage.getItem("token");
 
 			const res = await fetch(
-				`http://localhost:5000/api/categories/${deleteId}`,
+				`${process.env.NEXT_PUBLIC_API_URL}/api/categories/${deleteId}`,
 				{
 					method: "DELETE",
 

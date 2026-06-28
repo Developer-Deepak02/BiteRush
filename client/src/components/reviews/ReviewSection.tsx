@@ -63,7 +63,7 @@ export default function ReviewSection({ menuItemId }: Props) {
 	const fetchReviews = async () => {
 		try {
 			const res = await fetch(
-				`http://localhost:5000/api/reviews/menu/${menuItemId}`,
+				`${process.env.NEXT_PUBLIC_API_URL}/api/reviews/menu/${menuItemId}`,
 			);
 
 			const data = await res.json();
@@ -95,8 +95,8 @@ export default function ReviewSection({ menuItemId }: Props) {
 			const token = localStorage.getItem("token");
 
 			const url = editingReviewId
-				? `http://localhost:5000/api/reviews/${editingReviewId}`
-				: "http://localhost:5000/api/reviews";
+				? `${process.env.NEXT_PUBLIC_API_URL}/api/reviews/${editingReviewId}`
+				: `${process.env.NEXT_PUBLIC_API_URL}/api/reviews`;
 
 			const method = editingReviewId ? "PUT" : "POST";
 
@@ -167,7 +167,7 @@ export default function ReviewSection({ menuItemId }: Props) {
 		try {
 			const token = localStorage.getItem("token");
 
-			const res = await fetch(`http://localhost:5000/api/reviews/${reviewId}`, {
+			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews/${reviewId}`, {
 				method: "DELETE",
 
 				headers: {
